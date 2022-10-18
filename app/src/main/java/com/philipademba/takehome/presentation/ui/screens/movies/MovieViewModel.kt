@@ -5,8 +5,9 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.philipademba.takehome.data.repository.moviesdetail.MovieRepositoryImpl
-import com.philipademba.takehome.presentation.ui.paging.MoviesPagingSource
+import com.philipademba.takehome.data.repository.movies.MovieRepositoryImpl
+
+import com.philipademba.takehome.presentation.ui.screens.movies.paging.MoviesPagingSource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

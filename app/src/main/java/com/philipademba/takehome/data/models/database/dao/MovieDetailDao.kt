@@ -17,6 +17,6 @@ interface MovieDetailDao {
 
 
     @Query("SELECT * FROM MovieDetail WHERE id = :id_")
-    suspend fun getMovieDetail(id_: Long): MovieDetail?
+    suspend fun getMovieDetail(id_: Long): List<MovieDetail>
 
 }

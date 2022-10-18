@@ -13,7 +13,7 @@ class MovieDetailRepositoryImpl @Inject constructor(
     MovieDetailRepository {
     override suspend fun fetchMovieDetail(movieId: Int): MovieDetail? {
         val detail = localMoviesDataSource.fetchMovieDetail(movieId)
-        if (detail != null) {
+        if (detail == null) {
             val movieDetail = remoteDataSource.fetchMovieDetail(movieId)
             localMoviesDataSource.insertMovieDetail(movieDetail)
         }
