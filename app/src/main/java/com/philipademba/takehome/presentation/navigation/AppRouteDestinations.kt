@@ -10,6 +10,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
 import com.philipademba.takehome.presentation.ui.moviedetail.screen.MovieDetailScreen
 import com.philipademba.takehome.presentation.ui.moviedetail.viemodel.MovieDetailScreenViewModel
 import com.philipademba.takehome.presentation.ui.movies.screen.MovieListScreen
@@ -39,7 +40,7 @@ fun AppRouteDestinations(
             composable("${ScreenRoutes.MovieDetailScreen.route}/{movieId}") {
                 val viewModel: MovieDetailScreenViewModel = hiltViewModel()
                 val state by viewModel.state.collectAsState()
-                MovieDetailScreen(state)
+                MovieDetailScreen(state) { navController.navigateUp() }
             }
         }
     }

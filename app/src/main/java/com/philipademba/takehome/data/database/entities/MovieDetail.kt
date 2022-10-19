@@ -1,9 +1,9 @@
-package com.philipademba.takehome.data.models.database.entities
+package com.philipademba.takehome.data.database.entities
 
 import androidx.room.Entity
-import com.philipademba.takehome.data.models.api.movies.ProductionCompanyResponse
-import com.philipademba.takehome.data.models.api.movies.SpokenLanguage
-import com.philipademba.takehome.data.models.api.movies.genre.Genre
+import com.philipademba.takehome.data.models.api.moviedetail.ProductionCompanyResponse
+import com.philipademba.takehome.data.models.api.moviedetail.SpokenLanguage
+import com.philipademba.takehome.data.models.api.moviedetail.genre.Genre
 
 @Entity(primaryKeys = ["id"])
 data class MovieDetail(

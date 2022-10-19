@@ -32,11 +32,12 @@ import coil.imageLoader
 import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.philipademba.takehome.R
-import com.philipademba.takehome.data.models.database.entities.MovieDetail
+import com.philipademba.takehome.data.database.entities.MovieDetail
+import com.philipademba.takehome.presentation.ui.components.PrimaryButton
 import java.time.Duration
 
 @Composable
-fun MovieDetail(movie: MovieDetail) {
+fun MovieDetail(movie: MovieDetail, goBack: () -> Unit,) {
     Column(
         Modifier
             .fillMaxSize()
@@ -123,6 +124,9 @@ fun MovieDetail(movie: MovieDetail) {
 
 
         }, color = Color.DarkGray, modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+
+        Spacer(modifier = Modifier.height(8.dp))
+        PrimaryButton(text = "Go Back", onClick = goBack)
     }
 }
 

@@ -1,4 +1,4 @@
-package com.philipademba.takehome.data.models.database.entities
+package com.philipademba.takehome.data.database.entities
 
 import androidx.compose.runtime.Immutable
 import androidx.room.Entity

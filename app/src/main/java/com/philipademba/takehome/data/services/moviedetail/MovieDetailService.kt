@@ -1,6 +1,6 @@
-package com.philipademba.takehome.data.apiservice.moviedetail
+package com.philipademba.takehome.data.services.moviedetail
 
-import com.philipademba.takehome.data.models.api.movies.MovieDetailResponse
+import com.philipademba.takehome.data.models.api.moviedetail.MovieDetailResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 

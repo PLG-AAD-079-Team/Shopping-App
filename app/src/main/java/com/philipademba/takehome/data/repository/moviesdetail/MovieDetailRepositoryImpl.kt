@@ -3,7 +3,7 @@ package com.philipademba.takehome.data.repository.moviesdetail
 
 import com.philipademba.takehome.data.datasource.moviesdetail.implementation.LocalMovieDetailDataSourceImpl
 import com.philipademba.takehome.data.datasource.moviesdetail.implementation.RemoteMovieDetailDataSourceImpl
-import com.philipademba.takehome.data.models.database.entities.MovieDetail
+import com.philipademba.takehome.data.database.entities.MovieDetail
 import javax.inject.Inject
 
 class MovieDetailRepositoryImpl @Inject constructor(

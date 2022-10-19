@@ -1,9 +1,9 @@
-package com.philipademba.takehome.data.models.database.converters
+package com.philipademba.takehome.data.database.converters
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.philipademba.takehome.data.models.api.movies.SpokenLanguage
+import com.philipademba.takehome.data.models.api.moviedetail.SpokenLanguage
 
 
 open class SpokenLanguageListConverter {

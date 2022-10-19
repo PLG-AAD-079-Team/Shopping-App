@@ -1,7 +1,6 @@
 package com.philipademba.takehome.data.repository.movies
 
-import com.philipademba.takehome.data.models.database.entities.Movie
-import com.philipademba.takehome.data.models.database.entities.MovieDetail
+import com.philipademba.takehome.data.database.entities.Movie
 
 interface MovieRepository {
     suspend fun search(

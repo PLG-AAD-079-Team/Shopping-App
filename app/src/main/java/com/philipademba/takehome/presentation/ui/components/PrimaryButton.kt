@@ -1,5 +1,6 @@
 package com.philipademba.takehome.presentation.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,12 +21,13 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun PrimaryButton(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier.padding(16.dp),
     text: String,
     onClick: () -> Unit,
     imageVector: ImageVector? = null,
     fontColor: Color = Color.Black,
-    enabled: Boolean = false,
+    enabled: Boolean = true,
+
 
     ) {
     Button(
@@ -34,6 +36,7 @@ fun PrimaryButton(
         modifier = modifier
             .fillMaxWidth()
             .height(50.dp)
+
             .clip(RoundedCornerShape(10.dp))
             .focusable()
     ) {

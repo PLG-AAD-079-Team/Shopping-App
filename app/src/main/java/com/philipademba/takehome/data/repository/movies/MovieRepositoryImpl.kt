@@ -2,7 +2,7 @@ package com.philipademba.takehome.data.repository.movies
 
 import com.philipademba.takehome.data.datasource.movies.implementation.LocalMoviesDataSourceImpl
 import com.philipademba.takehome.data.datasource.movies.implementation.RemoteMoviesDataSourceImpl
-import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.data.database.entities.Movie
 import com.philipademba.takehome.presentation.ui.movies.paging.MoviesPagingSource
 import java.util.logging.Logger
 import javax.inject.Inject

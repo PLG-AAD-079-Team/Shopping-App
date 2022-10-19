@@ -1,7 +1,7 @@
 package com.philipademba.takehome.data.datasource.movies.implementation
 
 
-import com.philipademba.takehome.data.apiservice.movie.MovieService
+import com.philipademba.takehome.data.services.movie.MovieService
 import com.philipademba.takehome.data.datasource.movies.definition.MoviesDataSource
 import com.philipademba.takehome.data.models.api.movies.getMoviesList
 import javax.inject.Inject

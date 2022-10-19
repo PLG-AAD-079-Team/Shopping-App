@@ -42,7 +42,7 @@ import coil.imageLoader
 import coil.request.CachePolicy
 import coil.request.ImageRequest
 import com.philipademba.takehome.R
-import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.data.database.entities.Movie
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable

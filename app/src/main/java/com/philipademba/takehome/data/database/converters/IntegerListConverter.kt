@@ -1,6 +1,6 @@
 
 
-package com.philipademba.takehome.data.models.database.converters
+package com.philipademba.takehome.data.database.converters
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson

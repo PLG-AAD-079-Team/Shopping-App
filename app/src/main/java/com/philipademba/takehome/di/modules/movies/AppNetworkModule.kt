@@ -1,6 +1,6 @@
 package com.philipademba.takehome.di.modules.movies
 
-import com.philipademba.takehome.data.apiservice.movie.MovieService
+import com.philipademba.takehome.data.services.movie.MovieService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

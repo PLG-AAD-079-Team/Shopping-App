@@ -1,9 +1,8 @@
-package com.philipademba.takehome.data.apiservice.movie
+package com.philipademba.takehome.data.services.movie
 
-import com.philipademba.takehome.data.models.api.movies.CreditsResponse
-import com.philipademba.takehome.data.models.api.movies.ImagesResponse
-import com.philipademba.takehome.data.models.api.movies.MovieDetailResponse
-import com.philipademba.takehome.data.models.api.movies.genre.GenresResponse
+
+import com.philipademba.takehome.data.models.api.moviedetail.MovieDetailResponse
+import com.philipademba.takehome.data.models.api.moviedetail.genre.GenresResponse
 import com.philipademba.takehome.data.models.api.movies.MoviesDto
 import retrofit2.http.GET
 import retrofit2.http.Path

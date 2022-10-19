@@ -1,8 +1,8 @@
-package com.philipademba.takehome.data.models.api.movies
+package com.philipademba.takehome.data.models.api.moviedetail
 
 import com.google.gson.annotations.SerializedName
-import com.philipademba.takehome.data.models.api.movies.genre.Genre
-import com.philipademba.takehome.data.models.database.entities.MovieDetail
+import com.philipademba.takehome.data.database.entities.MovieDetail
+import com.philipademba.takehome.data.models.api.moviedetail.genre.Genre
 
 
 data class MovieDetailResponse(

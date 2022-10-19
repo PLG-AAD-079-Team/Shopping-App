@@ -2,7 +2,7 @@ package com.philipademba.takehome.presentation.ui.movies.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.data.database.entities.Movie
 import com.philipademba.takehome.data.repository.movies.MovieRepository
 import java.util.logging.Logger
 

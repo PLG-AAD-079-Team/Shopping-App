@@ -1,13 +1,10 @@
 package com.philipademba.takehome.di.modules.movies
 
 import android.content.Context
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.preferencesDataStore
 import androidx.room.Room
-import com.philipademba.takehome.data.models.database.AppDatabase
-import com.philipademba.takehome.data.models.database.dao.MovieDao
-import com.philipademba.takehome.data.models.database.dao.MovieDetailDao
+import com.philipademba.takehome.data.database.AppDatabase
+import com.philipademba.takehome.data.database.dao.MovieDao
+import com.philipademba.takehome.data.database.dao.MovieDetailDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

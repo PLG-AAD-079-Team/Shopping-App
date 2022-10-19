@@ -7,8 +7,8 @@ import androidx.compose.ui.Modifier
 import com.philipademba.takehome.presentation.ui.moviedetail.state.MovieDetailUiState
 
 @Composable
-fun MovieDetailScreen(state: MovieDetailUiState) {
+fun MovieDetailScreen(state: MovieDetailUiState, goBack: () -> Unit) {
     Box(Modifier.fillMaxSize()) {
-        MovieDetail(movie = state.movieDetail)
+        MovieDetail(movie = state.movieDetail,goBack)
     }
 }

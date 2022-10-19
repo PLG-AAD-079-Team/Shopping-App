@@ -2,8 +2,8 @@ package com.philipademba.takehome.data.datasource.movies.implementation
 
 
 import com.philipademba.takehome.data.datasource.movies.definition.MoviesDataSource
-import com.philipademba.takehome.data.models.database.dao.MovieDao
-import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.data.database.dao.MovieDao
+import com.philipademba.takehome.data.database.entities.Movie
 import javax.inject.Inject
 
 class LocalMoviesDataSourceImpl @Inject constructor(

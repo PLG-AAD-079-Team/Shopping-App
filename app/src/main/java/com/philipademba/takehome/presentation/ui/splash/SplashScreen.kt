@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
-import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.data.database.entities.Movie
 import com.philipademba.takehome.presentation.ui.movies.screen.MovieContent
 import com.philipademba.takehome.presentation.ui.movies.viewmodel.MovieListViewModel
 
@@ -26,38 +26,11 @@ fun SplashScreen(
     onRefresh: () -> Unit
 ) {
 
-
 }
 
 private const val COLUMN_COUNT = 2
 private val GRID_SPACING = 8.dp
 
-@Composable
-fun LazyMoviesGrid(state: LazyGridState, moviePagingItems: LazyPagingItems<Movie>, onMovieClicked: (Int) -> Unit) {
-
-    LazyVerticalGrid(columns = GridCells.Fixed(COLUMN_COUNT),
-        contentPadding = PaddingValues(
-            start = GRID_SPACING,
-            end = GRID_SPACING,
-            bottom = WindowInsets.navigationBars.getBottom(LocalDensity.current).toDp().dp.plus(
-                GRID_SPACING
-            )
-        ),
-        horizontalArrangement = Arrangement.spacedBy(GRID_SPACING, Alignment.CenterHorizontally),
-        state = state,
-        content = {
-
-            items(moviePagingItems.itemCount) { index ->
-                val movie = moviePagingItems.peek(index) ?: return@items
-                MovieContent(
-                    movie,
-                    Modifier
-                        .height(320.dp)
-                        .padding(vertical = GRID_SPACING), onMovieClicked
-                )
-            }
-        })
-}
 
 @Composable
 fun Int.toDp(): Float {

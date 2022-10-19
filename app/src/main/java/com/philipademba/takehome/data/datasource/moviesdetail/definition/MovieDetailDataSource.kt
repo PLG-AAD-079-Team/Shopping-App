@@ -1,6 +1,6 @@
 package com.philipademba.takehome.data.datasource.moviesdetail.definition
 
-import com.philipademba.takehome.data.models.database.entities.MovieDetail
+import com.philipademba.takehome.data.database.entities.MovieDetail
 
 interface MovieDetailDataSource {
 

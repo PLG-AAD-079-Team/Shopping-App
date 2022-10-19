@@ -22,7 +22,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshState
 import com.philipademba.takehome.R
-import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.data.database.entities.Movie
 import com.philipademba.takehome.presentation.ui.movies.viewmodel.MovieListViewModel
 
 private const val COLUMN_COUNT = 2

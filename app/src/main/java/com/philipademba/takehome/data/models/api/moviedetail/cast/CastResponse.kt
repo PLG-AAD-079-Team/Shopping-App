@@ -1,4 +1,4 @@
-package com.philipademba.takehome.data.models.api.movies.cast
+package com.philipademba.takehome.data.models.api.moviedetail.cast
 
 import com.google.gson.annotations.SerializedName
 

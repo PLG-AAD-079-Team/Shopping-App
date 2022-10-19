@@ -1,7 +1,7 @@
 package com.philipademba.takehome.data.models.api.movies
 
 import com.google.gson.annotations.SerializedName
-import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.data.database.entities.Movie
 
 data class MovieDto(
     @SerializedName("id") val id: Int,

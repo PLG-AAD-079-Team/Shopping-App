@@ -38,3 +38,5 @@
 - Incomplete features
   - Pull to refresh
   - Top bar navigation title updates on navigation
+  - Integration of all details in the movie details page such as cast, video, etc
+    

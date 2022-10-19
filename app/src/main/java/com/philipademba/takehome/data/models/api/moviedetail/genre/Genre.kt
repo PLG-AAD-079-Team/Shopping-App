@@ -1,4 +1,4 @@
-package com.philipademba.takehome.data.models.api.movies.genre
+package com.philipademba.takehome.data.models.api.moviedetail.genre
 
 import com.google.gson.annotations.SerializedName
 
