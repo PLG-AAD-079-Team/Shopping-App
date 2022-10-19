@@ -3,6 +3,8 @@ package com.philipademba.takehome.data.repository.movies
 import com.philipademba.takehome.data.datasource.movies.implementation.LocalMoviesDataSourceImpl
 import com.philipademba.takehome.data.datasource.movies.implementation.RemoteMoviesDataSourceImpl
 import com.philipademba.takehome.data.models.database.entities.Movie
+import com.philipademba.takehome.presentation.ui.movies.paging.MoviesPagingSource
+import java.util.logging.Logger
 import javax.inject.Inject
 
 class MovieRepositoryImpl @Inject constructor(
@@ -25,15 +27,21 @@ class MovieRepositoryImpl @Inject constructor(
     override suspend fun fetchMovies(pageNumber: Int, options: Map<String, String>): List<Movie> {
         return try {
             val result = remoteDataSource.fetchMovies(pageNumber, options)
+            Logger.getLogger(MoviesPagingSource::class.java.name)
+                .severe("Okwado remote ${result.size}")
             localMoviesDataSource.insertMovies(result)
             localMoviesDataSource.fetchMovies(pageNumber, options)
         } catch (e: Exception) {
+            Logger.getLogger(MoviesPagingSource::class.java.name)
+                .severe("Okwado error ${e.message}")
             localMoviesDataSource.fetchMovies(pageNumber, options)
         }
 
     }
 
     override suspend fun refresh() {
+        localMoviesDataSource.clearData()
+        fetchMovies(1, mapOf())
     }
 
 }

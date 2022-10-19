@@ -18,6 +18,9 @@ interface MovieDao {
     @Query("SELECT * FROM MOVIE WHERE id = :id_")
     suspend fun getMovie(id_: Long): Movie
 
-    @Query("SELECT * FROM Movie WHERE page = :page_")
+    @Query("SELECT * FROM Movie WHERE page = :page_ ORDER BY page DESC LIMIT 20")
     suspend fun getMovieList(page_: Int): List<Movie>
+
+    @Query("DELETE FROM Movie")
+    suspend fun deleteAll()
 }

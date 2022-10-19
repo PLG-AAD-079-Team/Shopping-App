@@ -1,10 +1,10 @@
-package com.philipademba.takehome.presentation.ui.screens.moviedetail.viemodel
+package com.philipademba.takehome.presentation.ui.moviedetail.viemodel
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.philipademba.takehome.domain.moviedetail.GetMovieDetailUseCase
-import com.philipademba.takehome.presentation.ui.screens.moviedetail.state.MovieDetailUiState
+import com.philipademba.takehome.presentation.ui.moviedetail.state.MovieDetailUiState
 import com.philipademba.takehome.shared.util.AppResource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -20,5 +20,8 @@ interface MoviesDataSource {
     suspend fun insertMovies(list: List<Movie>) {
 
     }
+    suspend fun clearData(){
+
+    }
 
 }

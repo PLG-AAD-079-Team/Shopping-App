@@ -1,4 +1,4 @@
-package com.philipademba.takehome.presentation.ui.screens
+package com.philipademba.takehome.presentation.ui.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

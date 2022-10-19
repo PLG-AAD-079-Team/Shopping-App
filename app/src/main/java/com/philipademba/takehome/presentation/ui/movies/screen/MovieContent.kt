@@ -1,6 +1,5 @@
-package com.philipademba.takehome.presentation.ui.screens.movies
+package com.philipademba.takehome.presentation.ui.movies.screen
 
-//import androidx.compose.foundation.layout.BoxScopeInstance.align
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -48,12 +47,12 @@ import com.philipademba.takehome.data.models.database.entities.Movie
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun MovieContent(movie: Movie, modifier: Modifier = Modifier, onMovieClicked: (Int) -> Unit = {}) {
-    Box(modifier = modifier) {
+    Box(modifier = modifier.padding(bottom = 8.dp)) {
         MovieRate(
             movie.voteAverage,
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(top = 10.dp)
+                .padding(top = 16.dp, end = 10.dp)
                 .zIndex(2f)
         )
         Card(
@@ -61,7 +60,7 @@ fun MovieContent(movie: Movie, modifier: Modifier = Modifier, onMovieClicked: (I
                 .fillMaxSize()
                 .offset(y = 12.dp),
             shape = RoundedCornerShape(size = 8.dp),
-            elevation = 8.dp,
+            elevation = 18.dp,
             onClick = { onMovieClicked(movie.id) }
         ) {
             Box {

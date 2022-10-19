@@ -3,4 +3,5 @@
     <string name="go_back_icon">Go back</string>
     <string name="movie_poster_content_description">movie poster image content\n</string>
     <string name="discover_movies">Discover Movies</string>
+    <string name="fetching_movies">Loading Movies...</string>
 </resources>

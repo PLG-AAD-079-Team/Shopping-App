@@ -10,10 +10,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.philipademba.takehome.presentation.ui.screens.moviedetail.screen.MovieDetailScreen
-import com.philipademba.takehome.presentation.ui.screens.moviedetail.viemodel.MovieDetailScreenViewModel
-import com.philipademba.takehome.presentation.ui.screens.movies.MovieListScreen
-import com.philipademba.takehome.presentation.ui.screens.movies.MovieListViewModel
+import com.philipademba.takehome.presentation.ui.moviedetail.screen.MovieDetailScreen
+import com.philipademba.takehome.presentation.ui.moviedetail.viemodel.MovieDetailScreenViewModel
+import com.philipademba.takehome.presentation.ui.movies.screen.MovieListScreen
+import com.philipademba.takehome.presentation.ui.movies.viewmodel.MovieListViewModel
 
 
 @Composable
@@ -28,9 +28,12 @@ fun AppRouteDestinations(
         ) {
             composable(ScreenRoutes.MoviesListScreen.route) {
                 val viewModel: MovieListViewModel = hiltViewModel()
-                MovieListScreen(movieListViewModel = viewModel, onRefresh = {}, onMovieClicked = {
-                    navController.navigate("${ScreenRoutes.MovieDetailScreen.route}/$it")
-                })
+                MovieListScreen(
+                    movieListViewModel = viewModel,
+                    onRefresh = viewModel::refresh,
+                    onMovieClicked = {
+                        navController.navigate("${ScreenRoutes.MovieDetailScreen.route}/$it")
+                    })
             }
 
             composable("${ScreenRoutes.MovieDetailScreen.route}/{movieId}") {

@@ -1,4 +1,4 @@
-package com.philipademba.takehome.presentation.ui.screens
+package com.philipademba.takehome.presentation.ui.main
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

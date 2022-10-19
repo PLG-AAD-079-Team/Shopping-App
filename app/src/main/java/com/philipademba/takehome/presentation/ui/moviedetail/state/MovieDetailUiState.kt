@@ -1,4 +1,4 @@
-package com.philipademba.takehome.presentation.ui.screens.moviedetail.state
+package com.philipademba.takehome.presentation.ui.moviedetail.state
 
 import com.philipademba.takehome.data.models.database.entities.MovieDetail
 
