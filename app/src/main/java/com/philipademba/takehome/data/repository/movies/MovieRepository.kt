@@ -15,7 +15,7 @@ interface MovieRepository {
     ): List<Movie>
 
 
-    suspend fun refresh(){
-
+    suspend fun refresh(): List<Movie> {
+        return emptyList()
     }
 }

@@ -14,7 +14,8 @@ class MoviesPagingSource constructor(private val movieRepository: MovieRepositor
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movie> {
 
         return try {
-            val nextPageNumber = params.key ?: 1
+            var nextPageNumber = params.key ?: 1
+
             val response = movieRepository.fetchMovies(nextPageNumber, mapOf())
             Logger.getLogger(MoviesPagingSource::class.java.name).warning(" Okwado  nun- $nextPageNumber")
             val nextKey = if (response.isNotEmpty() && response.last().page < 35490) {

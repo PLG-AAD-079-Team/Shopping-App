@@ -61,7 +61,11 @@ fun MovieContent(movie: Movie, modifier: Modifier = Modifier, onMovieClicked: (I
                 .offset(y = 12.dp),
             shape = RoundedCornerShape(size = 8.dp),
             elevation = 18.dp,
-            onClick = { onMovieClicked(movie.id) }
+            onClick = {
+                movie.voteCount =10
+               // onMovieClicked(movie.id)
+
+            }
         ) {
             Box {
                 MoviePoster(movie.posterPath ?: "https://goo.com", movie.name)
