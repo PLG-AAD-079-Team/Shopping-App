@@ -62,8 +62,8 @@ fun MovieContent(movie: Movie, modifier: Modifier = Modifier, onMovieClicked: (I
             shape = RoundedCornerShape(size = 8.dp),
             elevation = 18.dp,
             onClick = {
-                movie.voteCount =10
-               // onMovieClicked(movie.id)
+
+                onMovieClicked(movie.id)
 
             }
         ) {
