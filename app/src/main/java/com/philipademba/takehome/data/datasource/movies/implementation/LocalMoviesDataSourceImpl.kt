@@ -21,7 +21,6 @@ class LocalMoviesDataSourceImpl @Inject constructor(
         options: Map<String, String>
     ) = movieDao.getMovieList(pageNumber)
 
-
     override suspend fun insertMovies(list: List<Movie>) {
         movieDao.insertMovieList(list)
     }
@@ -29,5 +28,4 @@ class LocalMoviesDataSourceImpl @Inject constructor(
     override suspend fun clearData() {
         movieDao.deleteAll()
     }
-
 }

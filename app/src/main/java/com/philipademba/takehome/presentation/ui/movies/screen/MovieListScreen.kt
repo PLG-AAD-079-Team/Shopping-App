@@ -45,6 +45,7 @@ fun MovieListScreen(
         ) {
             when (movies.loadState.refresh) {
                 is LoadState.Loading -> {
+                    pullState.isRefreshing = true
                     Text(stringResource(id = R.string.fetching_movies))
                 }
 
