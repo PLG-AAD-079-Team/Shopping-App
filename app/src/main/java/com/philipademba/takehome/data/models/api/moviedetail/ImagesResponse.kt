@@ -2,13 +2,11 @@ package com.philipademba.takehome.data.models.api.moviedetail
 
 import com.google.gson.annotations.SerializedName
 
-
 data class ImagesResponse(
     @SerializedName("backdrops") val backdrops: List<ImageResponse>,
     @SerializedName("id") val id: Int,
     @SerializedName("posters") val posters: List<ImageResponse>
 )
-
 
 data class ImageResponse(
     @SerializedName("aspect_ratio") val aspectRatio: Double,

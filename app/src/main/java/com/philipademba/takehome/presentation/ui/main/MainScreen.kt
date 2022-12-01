@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -41,7 +42,8 @@ fun MainScreen(
                             Text(
                                 text = stringResource(R.string.discover_movies),
                                 style = MaterialTheme.typography.h6,
-                                color = Color.DarkGray
+                                color = Color.DarkGray,
+                                modifier = Modifier.testTag(stringResource(R.string.discover_movies))
                             )
                         }
                     },

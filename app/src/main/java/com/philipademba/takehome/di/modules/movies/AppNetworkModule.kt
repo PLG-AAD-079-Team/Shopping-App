@@ -14,6 +14,6 @@ class AppNetworkModule {
 
     @Provides
     @Singleton
-    fun provideMoviesApi(retrofit: Retrofit) = retrofit.create(MovieService::class.java)
+    fun provideMoviesApi(retrofit: Retrofit): MovieService = retrofit.create(MovieService::class.java)
 
 }

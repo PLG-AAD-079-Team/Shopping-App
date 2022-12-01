@@ -17,7 +17,7 @@ import javax.inject.Inject
 class MovieListViewModel @Inject constructor(private val movieRepository: MovieRepositoryImpl) :
     ViewModel() {
 
-    val _state = MutableStateFlow(MovieListUiState())
+    private val _state = MutableStateFlow(MovieListUiState())
     val state = _state.asStateFlow()
     private val pager = Pager(
 

@@ -77,6 +77,11 @@ android {
     sourceSets {
         test.assets.srcDirs += files("$projectDir/schemas".toString())
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 
     namespace 'com.philipademba.takehome'
 
@@ -164,25 +169,32 @@ dependencies {
     implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
 
 
-    // Local unit tests
-    testImplementation "androidx.test:core:1.4.0"
-    testImplementation "junit:junit:4.13.2"
+    //testing
+    androidTestImplementation "junit:junit:4.13.2"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+    androidTestImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation 'androidx.test:core-ktx:1.4.0'
+    androidTestImplementation "io.mockk:mockk-android:1.12.4"
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.42'
+    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.42'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.test:runner:1.4.0'
+    testImplementation 'androidx.test:rules:1.4.0'
+    testImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    testImplementation 'androidx.test.ext:junit:1.1.3'
+    testImplementation 'org.robolectric:robolectric:4.9'
     testImplementation "androidx.arch.core:core-testing:2.1.0"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
     testImplementation "com.google.truth:truth:1.1.3"
     testImplementation "com.squareup.okhttp3:mockwebserver:4.9.3"
     testImplementation "io.mockk:mockk:1.12.4"
     debugImplementation "androidx.compose.ui:ui-test-manifest:1.3.0-beta03"
+    testImplementation 'org.robolectric:robolectric:4.7.3'
+    testImplementation 'androidx.compose.ui:ui-test-junit4:1.0.5'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest:1.0.5'
 
-    // Instrumentation tests
-    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.42'
-    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.42'
-    androidTestImplementation "junit:junit:4.13.2"
-    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
-    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
-    androidTestImplementation "com.google.truth:truth:1.1.3"
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test:core-ktx:1.4.0'
-    androidTestImplementation "io.mockk:mockk-android:1.12.4"
-    androidTestImplementation 'androidx.test:runner:1.4.0'
 }
