@@ -138,6 +138,10 @@ dependencies {
     //used to prevent flag_immutable crash
     implementation 'androidx.work:work-runtime-ktx:2.7.1'
 
+    //open maps
+    implementation 'org.osmdroid:osmdroid-android:6.1.2'
+    implementation 'com.github.MKergall:osmbonuspack:6.4'
+
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation 'androidx.activity:activity-compose:1.6.0'
@@ -165,8 +169,11 @@ dependencies {
     implementation "androidx.paging:paging-guava:$paging_version"
     implementation "androidx.paging:paging-compose:1.0.0-alpha16"
 
-    //datastorw
+    //datastore
     implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
+
+    //permissions
+    implementation "com.google.accompanist:accompanist-permissions:0.21.1-beta"
 
 
     //testing

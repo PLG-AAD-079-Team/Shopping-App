@@ -5,5 +5,6 @@ class AppDestinations {
         const val SPLASH = "splash"
         const val MOVIES_LIST_SCREEN = "movies_list"
         const val MOVIES_DETAIL_SCREEN = "movie_detail"
+        const val MAP_SCREEN = "map"
     }
 }

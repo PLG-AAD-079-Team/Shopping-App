@@ -11,6 +11,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
+import com.philipademba.takehome.presentation.ui.maps.screen.MapViewer
 import com.philipademba.takehome.presentation.ui.moviedetail.screen.MovieDetailScreen
 import com.philipademba.takehome.presentation.ui.moviedetail.viemodel.MovieDetailScreenViewModel
 import com.philipademba.takehome.presentation.ui.movies.screen.MovieListScreen
@@ -25,7 +26,7 @@ fun AppRouteDestinations(
         Modifier.fillMaxSize()
     ) {
         NavHost(
-            navController = navController, startDestination = ScreenRoutes.MoviesListScreen.route
+            navController = navController, startDestination = ScreenRoutes.MapScreen.route
         ) {
             composable(ScreenRoutes.MoviesListScreen.route) {
                 val viewModel: MovieListViewModel = hiltViewModel()
@@ -41,6 +42,10 @@ fun AppRouteDestinations(
                 val viewModel: MovieDetailScreenViewModel = hiltViewModel()
                 val state by viewModel.state.collectAsState()
                 MovieDetailScreen(state) { navController.navigateUp() }
+            }
+
+            composable(ScreenRoutes.MapScreen.route) {
+              MapViewer()
             }
         }
     }

@@ -40,6 +40,7 @@ class ExampleUnitTest {
             }
     }
 
+
     @Test fun `Check if navigation page works` () {
         ActivityScenario.launch(MainActivity::class.java)
             .use { scenario ->
