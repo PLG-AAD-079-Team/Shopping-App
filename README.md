@@ -1,5 +1,5 @@
 
-<h1 align="center">Movies Demo Application</h1>
+<h1 align="center">Shopping Application</h1>
 <h4 align="center"> This is Movie listing app using TheMovieDb which demonstrates using of jetpack compose , retrofit, room database and hilt</h4>
 
 <br/>
